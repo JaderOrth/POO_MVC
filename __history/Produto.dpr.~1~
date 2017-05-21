@@ -1,0 +1,14 @@
+program Produto;
+
+uses
+  Vcl.Forms,
+  uInicial in 'uInicial.pas' {frmProdutos};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TfrmProdutos, frmProdutos);
+  Application.Run;
+end.
