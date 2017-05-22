@@ -4,7 +4,7 @@ interface
 
 uses
   System.Classes, System.SysUtils, Vcl.Dialogs, FireDAC.Comp.Client,
-  uInterfaceListagemController, uProdutoListagem, uProdutoCadastroController;
+  uInterfaceListagemController, uProdutoListagem;
 
 type
   TProdutoListagemController = class(TInterfacedObject,
@@ -15,7 +15,6 @@ type
   public
     procedure CriarFormListagem(AOwner: TComponent);
     procedure FecharFormListagem(Sender: TObject);
-    procedure CriarFormCadastro(Sender: TObject);
    // procedure Grid(AMemTable: TFDMemTable);
 
   end;
@@ -25,11 +24,6 @@ var
 implementation
 
 { TProdutoListagemController }
-
-procedure TProdutoListagemController.CriarFormCadastro(Sender: TObject);
-begin
-
-end;
 
 procedure TProdutoListagemController.CriarFormListagem(AOwner: TComponent);
 begin

@@ -1,0 +1,22 @@
+unit uProdutoCadastroController;
+
+interface
+
+uses
+  uInterfaceCadastroController;
+
+
+type
+  TProdutoCadastroController = class(TInterfacedObject, IInterfaceCadastrocontroller)
+  private
+
+
+  public
+
+
+
+  end;
+
+implementation
+
+end.

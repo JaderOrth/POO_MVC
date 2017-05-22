@@ -9,7 +9,6 @@ type
   IInterfaceListagemController = interface
     procedure CriarFormListagem(AOwner: TComponent);
     procedure FecharFormListagem(Sender: TObject);
-    procedure CriarFormCadastro(Sender: TObject);
 
   end;
 

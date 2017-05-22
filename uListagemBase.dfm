@@ -22,7 +22,6 @@ object frmListagemBase: TfrmListagemBase
     Height = 65
     Align = alTop
     TabOrder = 0
-    ExplicitTop = 8
     object Panel2: TPanel
       Left = -4
       Top = 1
@@ -30,7 +29,6 @@ object frmListagemBase: TfrmListagemBase
       Height = 63
       Align = alRight
       TabOrder = 0
-      ExplicitLeft = -3
       object btnSair: TButton
         Left = 205
         Top = 4
@@ -55,6 +53,7 @@ object frmListagemBase: TfrmListagemBase
         Height = 58
         Caption = 'Cadastro'
         TabOrder = 2
+        OnClick = btnCadastroClick
       end
     end
   end

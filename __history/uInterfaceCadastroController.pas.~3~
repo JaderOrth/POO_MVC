@@ -1,0 +1,13 @@
+unit uInterfaceCadastroController;
+
+interface
+
+
+
+type
+  IInterfaceCadastrocontroller = interface
+
+  end;
+implementation
+
+end.

@@ -3,8 +3,8 @@ unit uProdutoListagemController;
 interface
 
 uses
-  System.Classes, System.SysUtils, Vcl.Dialogs,
-  uInterfaceListagemController, uProdutoListagem;
+  System.Classes, System.SysUtils, Vcl.Dialogs, FireDAC.Comp.Client,
+  uInterfaceListagemController, uProdutoListagem, uProdutoCadastroController;
 
 type
   TProdutoListagemController = class(TInterfacedObject,
@@ -15,7 +15,8 @@ type
   public
     procedure CriarFormListagem(AOwner: TComponent);
     procedure FecharFormListagem(Sender: TObject);
-    procedure Grid(Sender: TObject);
+    procedure CriarFormCadastro(Sender: TObject);
+   // procedure Grid(AMemTable: TFDMemTable);
 
   end;
 var
@@ -25,6 +26,13 @@ implementation
 
 { TProdutoListagemController }
 
+procedure TProdutoListagemController.CriarFormCadastro(Sender: TObject);
+begin
+  if (not(Assigned(oProdutoCadastroController))) then
+    oProdutoCadastroController := TProdutoCadastroController.Create;
+  oProdutoCadastroController.CriarFormCadastro(frmProdutoListagem);
+end;
+
 procedure TProdutoListagemController.CriarFormListagem(AOwner: TComponent);
 begin
   if (not(Assigned(frmProdutoListagem))) then
@@ -32,7 +40,7 @@ begin
   frmProdutoListagem.Show;
 
   frmProdutoListagem.btnSair.OnClick := FecharFormListagem;
-
+  //frmProdutoListagem.OnActivate := Grid;
 end;
 
 procedure TProdutoListagemController.FecharFormListagem(Sender: TObject);
@@ -40,11 +48,6 @@ begin
   if (Assigned(frmProdutoListagem)) then
     frmProdutoListagem.Close;
     FreeAndNil(frmProdutoListagem);
-end;
-
-procedure TProdutoListagemController.Grid(Sender: TObject);
-begin
-
 end;
 
 end.
