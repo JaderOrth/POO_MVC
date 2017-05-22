@@ -12,12 +12,11 @@ type
     MainMenu1: TMainMenu;
     Produto1: TMenuItem;
     procedure Produto1Click(Sender: TObject);
-    procedure FormCreate(Sender: TObject);
-    procedure FormClose(Sender: TObject; var Action: TCloseAction);
   private
     { Private declarations }
   public
     { Public declarations }
+    oProdutoController: TProdutoListagemController;
   end;
 
 var
@@ -27,22 +26,10 @@ implementation
 
 {$R *.dfm}
 
-procedure TfrmProdutos.FormClose(Sender: TObject; var Action: TCloseAction);
-begin
-  Action := caFree;
-  frmProdutos := nil;
-end;
-
-procedure TfrmProdutos.FormCreate(Sender: TObject);
-begin
-  ReportMemoryLeaksOnShutdown := true;
-end;
-
 procedure TfrmProdutos.Produto1Click(Sender: TObject);
 begin
-  if (not(Assigned(oProdutoListagemController))) then
-    oProdutoListagemController := TProdutoListagemController.Create;
-  oProdutoListagemController.CriarFormListagem(Self);
+{}
+  oProdutoController.CriarFormListagem(Self);
 end;
 
 end.

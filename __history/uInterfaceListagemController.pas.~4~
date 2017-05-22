@@ -1,0 +1,16 @@
+unit uInterfaceListagemController;
+
+interface
+
+uses
+  System.Classes;
+
+type
+  IInterfaceListagemController = interface
+    procedure CriarFormListagem(AOwner: TComponent);
+    procedure FecharFormListagem(Sender: TObject);
+  end;
+
+implementation
+
+end.

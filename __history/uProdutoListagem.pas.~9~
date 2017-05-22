@@ -12,6 +12,7 @@ uses
 
 type
   TfrmProdutoListagem = class(TfrmListagemBase)
+    procedure FormActivate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -24,5 +25,11 @@ var
 implementation
 
 {$R *.dfm}
+
+procedure TfrmProdutoListagem.FormActivate(Sender: TObject);
+begin
+  inherited;
+   oInterfaceListagemController.Grid(MemTable);
+end;
 
 end.

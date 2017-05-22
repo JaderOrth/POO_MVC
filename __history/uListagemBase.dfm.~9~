@@ -58,13 +58,13 @@ object frmListagemBase: TfrmListagemBase
       end
     end
   end
-  object DBGrid: TDBGrid
+  object DBGrid1: TDBGrid
     Left = 0
     Top = 65
     Width = 681
     Height = 300
     Align = alClient
-    DataSource = DataSource
+    DataSource = DataSource1
     TabOrder = 1
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
@@ -72,7 +72,7 @@ object frmListagemBase: TfrmListagemBase
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
   end
-  object MemTable: TFDMemTable
+  object FDMemTable1: TFDMemTable
     FetchOptions.AssignedValues = [evMode]
     FetchOptions.Mode = fmAll
     ResourceOptions.AssignedValues = [rvSilentMode]
@@ -83,8 +83,8 @@ object frmListagemBase: TfrmListagemBase
     Left = 440
     Top = 88
   end
-  object DataSource: TDataSource
-    DataSet = MemTable
+  object DataSource1: TDataSource
+    DataSet = FDMemTable1
     Left = 512
     Top = 128
   end

@@ -16,5 +16,9 @@ begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
   Application.CreateForm(TfrmProdutos, frmProdutos);
+  Application.CreateForm(TfrmListagemBase, frmListagemBase);
+  Application.CreateForm(TfrmCadastroBase, frmCadastroBase);
+  Application.CreateForm(TfrmProdutoListagem, frmProdutoListagem);
+  Application.CreateForm(TfrmProdutoCadastro, frmProdutoCadastro);
   Application.Run;
 end.

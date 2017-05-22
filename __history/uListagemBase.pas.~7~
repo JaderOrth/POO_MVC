@@ -17,9 +17,9 @@ type
     btnSair: TButton;
     btnEditar: TButton;
     btnCadastro: TButton;
-    MemTable: TFDMemTable;
-    DataSource: TDataSource;
-    DBGrid: TDBGrid;
+    FDMemTable1: TFDMemTable;
+    DataSource1: TDataSource;
+    DBGrid1: TDBGrid;
     procedure btnSairClick(Sender: TObject);
   private
     { Private declarations }

@@ -21,6 +21,7 @@ type
     DataSource: TDataSource;
     DBGrid: TDBGrid;
     procedure btnSairClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -38,6 +39,11 @@ implementation
 procedure TfrmListagemBase.btnSairClick(Sender: TObject);
 begin
   oInterfaceListagemController.FecharFormListagem(Sender);
+end;
+
+procedure TfrmListagemBase.FormCreate(Sender: TObject);
+begin
+   oInterfaceListagemController.Grid();
 end;
 
 end.

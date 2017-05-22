@@ -1,0 +1,13 @@
+unit uInterfaceListagemController;
+
+interface
+
+
+type
+  IInterfaceListagemController = interface
+
+  end;
+
+implementation
+
+end.

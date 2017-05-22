@@ -20,6 +20,7 @@ object frmCadastroBase: TfrmCadastroBase
     Height = 65
     Align = alTop
     TabOrder = 0
+    ExplicitLeft = -8
     object Panel2: TPanel
       Left = 0
       Top = 1

@@ -26,5 +26,4 @@ var
 implementation
 
 {$R *.dfm}
-
 end.

@@ -14,7 +14,6 @@ object frmProdutos: TfrmProdutos
   Menu = MainMenu1
   OldCreateOrder = True
   WindowState = wsMaximized
-  OnClose = FormClose
   OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
