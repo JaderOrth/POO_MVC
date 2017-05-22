@@ -47,7 +47,7 @@ procedure TProdutoListagemController.FecharFormListagem(Sender: TObject);
 begin
   if (Assigned(frmProdutoListagem)) then
     frmProdutoListagem.Close;
-    FreeAndNil(frmProdutoListagem);
+  FreeAndNil(frmProdutoListagem);
 end;
 
 end.

@@ -17,10 +17,12 @@ type
     btnSair: TButton;
     btnEditar: TButton;
     btnCadastro: TButton;
-    FDMemTable1: TFDMemTable;
-    DataSource1: TDataSource;
-    DBGrid1: TDBGrid;
+    MemTable: TFDMemTable;
+    DataSource: TDataSource;
+    DBGrid: TDBGrid;
     procedure btnSairClick(Sender: TObject);
+    procedure btnCadastroClick(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
   private
     { Private declarations }
   public
@@ -35,9 +37,19 @@ implementation
 
 {$R *.dfm}
 
+procedure TfrmListagemBase.btnCadastroClick(Sender: TObject);
+begin
+  oInterfaceListagemController.CriarFormCadastro(Sender);
+end;
+
 procedure TfrmListagemBase.btnSairClick(Sender: TObject);
 begin
   oInterfaceListagemController.FecharFormListagem(Sender);
+end;
+
+procedure TfrmListagemBase.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+  Action := caFree;
 end;
 
 end.

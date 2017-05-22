@@ -8,7 +8,7 @@ uses
 
 
 type
-  TProdutoCadastroController = class(TInterfacedObject, IInterfaceCadastrocontroller)
+  TProdutoCadastroController = class//(TInterfacedObject, IInterfaceCadastrocontroller)
   private
 
 
@@ -27,8 +27,9 @@ implementation
 
 procedure TProdutoCadastroController.CriarFormCadastro(AOwner: TComponent);
 begin
-  if (not(Assigned())) then
-  
+  if (not(Assigned(frmProdutoCadastro))) then
+    frmProdutoCadastro := TfrmProdutoCadastro.Create(AOwner);
+  frmProdutoCadastro.Show;
 end;
 
 end.

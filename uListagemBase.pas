@@ -22,15 +22,13 @@ type
     DBGrid: TDBGrid;
     procedure btnSairClick(Sender: TObject);
     procedure btnCadastroClick(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
   private
     { Private declarations }
   public
     { Public declarations }
     oInterfaceListagemController: IInterfaceListagemController;
   end;
-
-var
-  frmListagemBase: TfrmListagemBase;
 
 implementation
 
@@ -44,6 +42,11 @@ end;
 procedure TfrmListagemBase.btnSairClick(Sender: TObject);
 begin
   oInterfaceListagemController.FecharFormListagem(Sender);
+end;
+
+procedure TfrmListagemBase.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+  Action := caFree;
 end;
 
 end.

@@ -29,8 +29,8 @@ procedure TProdutoCadastroController.CriarFormCadastro(AOwner: TComponent);
 begin
   if (not(Assigned(frmProdutoCadastro))) then
     frmProdutoCadastro := TfrmProdutoCadastro.Create(AOwner);
-  //frmProdutoCadastro.oInterfaceCadastroController := oProdutoCadastroController;
-  frmProdutoCadastro.btnSair.OnClick := FecharFormCadastro;
+  frmProdutoCadastro.oInterfaceCadastroController := oProdutoCadastroController;
+  //frmProdutoCadastro.btnSair.OnClick := FecharFormCadastro;
   frmProdutoCadastro.Show;
 end;
 
@@ -39,7 +39,7 @@ begin
   if (not(Assigned(frmProdutoCadastro))) then
     exit;
   frmProdutoCadastro.Close;
-  FreeAndNil(frmProdutoCadastro);
+   FreeAndNil(frmProdutoCadastro);
 end;
 
 end.

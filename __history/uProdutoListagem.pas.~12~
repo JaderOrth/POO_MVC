@@ -12,17 +12,11 @@ uses
 
 type
   TfrmProdutoListagem = class(TfrmListagemBase)
-    DBGrid1: TDBGrid;
-    DataSource1: TDataSource;
-    FDMemTable1: TFDMemTable;
   private
     { Private declarations }
   public
     { Public declarations }
   end;
-
-var
-  frmProdutoListagem: TfrmProdutoListagem;
 
 implementation
 

@@ -18,9 +18,6 @@ type
     { Public declarations }
   end;
 
-var
-  frmProdutoListagem: TfrmProdutoListagem;
-
 implementation
 
 {$R *.dfm}

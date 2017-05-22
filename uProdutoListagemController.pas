@@ -20,7 +20,7 @@ type
 
   end;
 var
-  oProdutoListagemController: TProdutoListagemController;
+  oProdutoListagemController: IInterfaceListagemController;
 
 implementation
 
@@ -28,24 +28,28 @@ implementation
 
 procedure TProdutoListagemController.CriarFormCadastro(Sender: TObject);
 begin
-
+  if (not(Assigned(oProdutoCadastroController))) then
+    oProdutoCadastroController := TProdutoCadastroController.Create;
+    
+  oProdutoCadastroController.CriarFormCadastro(frmProdutoListagem);
 end;
 
 procedure TProdutoListagemController.CriarFormListagem(AOwner: TComponent);
 begin
   if (not(Assigned(frmProdutoListagem))) then
     frmProdutoListagem := TfrmProdutoListagem.Create(AOwner);
+
+  frmProdutoListagem.oInterfaceListagemController := oProdutoListagemController;
   frmProdutoListagem.Show;
 
-  frmProdutoListagem.btnSair.OnClick := FecharFormListagem;
-  //frmProdutoListagem.OnActivate := Grid;
+
 end;
 
 procedure TProdutoListagemController.FecharFormListagem(Sender: TObject);
 begin
   if (Assigned(frmProdutoListagem)) then
     frmProdutoListagem.Close;
-    FreeAndNil(frmProdutoListagem);
+  FreeAndNil(frmProdutoListagem);
 end;
 
 end.

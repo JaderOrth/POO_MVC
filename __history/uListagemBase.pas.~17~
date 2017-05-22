@@ -21,6 +21,7 @@ type
     DataSource: TDataSource;
     DBGrid: TDBGrid;
     procedure btnSairClick(Sender: TObject);
+    procedure btnCadastroClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -34,6 +35,11 @@ var
 implementation
 
 {$R *.dfm}
+
+procedure TfrmListagemBase.btnCadastroClick(Sender: TObject);
+begin
+  oInterfaceListagemController.CriarFormCadastro(Sender);
+end;
 
 procedure TfrmListagemBase.btnSairClick(Sender: TObject);
 begin
